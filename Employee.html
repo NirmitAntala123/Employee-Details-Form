@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Employee Details</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+    body {
+        margin: 50px 0 0 0;
+    }
+    
+    form {
+        margin: 20px 0 10px 0;
+    }
+    
+    #div1 {
+        background-color: rgb(238, 200, 147);
+        margin-right: 10px;
+        border: 2px solid black;
+        border-radius: 8px;
+    }
+    
+    #div2 {
+        background-color: rgb(238, 200, 147);
+        margin-right: 10px;
+        border: 2px solid black;
+        border-radius: 8px;
+    }
+</style>
+<script src="Employee.js">
+</script>
+
+<body style="background-color: aqua;">
+    <div class="row container-fluid">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-3" id="div1">
+            <form onsubmit="return myfunction()">
+                <center>
+                    <h4><b> Save Employee Details</b></h4><br></center>
+                <label>Name:</label>&emsp;&emsp;&ensp;
+                <input type="text" id="name" name="name">
+                <span style="color: red;" id="n1"></span><br><br>
+
+
+                <label>Email:</label>&emsp;&emsp;&ensp;
+                <input type="text" id="email" name="email">
+                <span style="color: red;" id="e1"></span><br><br>
+
+                <label>Mobile:</label>&emsp;&ensp;&ensp;
+                <input type="number" id="mobile" name="number">
+                <span style="color: red;" id="m1"></span><br><br>
+
+                <label>Emp code:</label>&ensp;
+                <input type="text" id="code" name="code">
+                <span style="color: red;" id="em112"></span><br><br>
+
+                <label>Gender:</label>&emsp;&ensp;&ensp;
+                <select name="gender" id="gender" style="width: 175px;">
+                    
+                    <option value="/" disabled selected>Select Gender:</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <span style="color: red;" id="g1"></span><br><br>
+
+
+                <label>Country:</label>&emsp;&ensp;
+                <input type="text" id="country" name="country" value="india" disabled>
+                <span style="color: red;" id="c1"></span><br><br>
+
+                <label>State:</label>&emsp;&emsp;&emsp;
+                <select name="state" id="state" style="width: 175px;" onchange="select(this.value)">
+                    
+                    <option value="/" disabled selected>Choose State</option>
+                    <option>Gujarat</option>
+                    <option>Rajsthan</option>
+                    <option>Madhyapradesh</option>
+                </select> <span style="color: red;" id="s1"></span><br><br>
+
+                <label>City:</label>&emsp;&emsp;&emsp;&ensp;
+                <select name="city" id="city" style="width: 175px;">
+                   
+                    <option value="/" disabled selected>Choose City</option>
+                    <option></option>
+                    </select> <span style="color: red;" id="c11"></span><br><br>
+                <center>
+                    <button type="button" value="Save" id="Save" onclick="storedata()">Save</button></center>
+            </form>
+        </div>
+
+        <div class="col-lg-3" id="div2">
+            <form>
+                <center>
+                    <h4><b> Search Employee Details</b></h4><br></center>
+                <label>Name:</label>&emsp;&emsp;
+                <input type="text" id="name1" name="se" style="height: 24px;"><br><br>
+
+                <label>Email</label>&emsp;&emsp;&ensp;
+                <input type="text" id="email1" name="se" style="height: 25px;"><br><br>
+
+                <label>Mobile</label>&emsp;&ensp;&ensp;
+                <input type="text" id="mobile1" name="se" style="height: 25px;"><br><br>
+
+                <label>Emp code</label>&ensp;
+                <input type="text" id="code1" name="se" style="height: 24px;"><br><br>
+
+                <label>Gender</label>&emsp;&ensp;&nbsp;
+                <input type="text" id="gender1" name="se" style="height: 24px;"><br><br>
+
+                <label>Country</label>&emsp;&ensp;
+                <input type="text" id="country1" name="se" style="height: 24px;"><br><br>
+
+                <label>State</label>&emsp;&emsp;&emsp;
+                <input type="text" id="state1" name="se" style="height: 24px;"><br><br>
+
+                <label>City</label>&emsp;&emsp;&emsp;&ensp;
+                <input type="text" id="city1" name="se" style="height: 24px;"><br><br>
+                <center>
+                    <button type="button" value="Search" id="Search" onclick="search()">Search</button></center>
+            </form>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</body>
+
+</html>
